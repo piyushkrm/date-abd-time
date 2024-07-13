@@ -8,6 +8,15 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Project</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 70px 10px 70px 10px;
+        }
+    </style>
     <script>
         let a;
         let date;
@@ -22,71 +31,21 @@
             document.getElementById('time').style.fontWeight = 600;
             document.getElementById('curent').style.color = "green";
             document.getElementById('curent').style.fontWeight = 600;
+            document.getElementById('body').style.backgroundColor = "black";
+            document.getElementById('container').style.backgroundColor = "lightpink";
+
         }, 1000);
 
     </script>
 
 </head>
 
-<body class="p-3 m-0 border-0 bd-example m-0 border-0">
-
-    <!-- Example Code -->
-
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit" fdprocessedid="0zz7ne">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container my-4">
+<body id="body" class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <div id="container" class="container my-4">
         <div class="jumbotron">
             <h1 class="display-4"><span id="curent">Current time is : </span><span id="time"></span></h1>
-            <hr class="my-4">
-            <p>We are here to show you the time for fifferent countries.</p>
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Browse Time</a>
-            </p>
         </div>
     </div>
-
-    <!-- End Example Code -->
 </body>
 
 </html>
