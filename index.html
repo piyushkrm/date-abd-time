@@ -12,12 +12,18 @@
         let a;
         let date;
         let time;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
         setInterval(() => {
             let a = new Date();
-            date = a.toLocaleDateString();
+            date = a.toLocaleDateString(undefined, options);
             time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
-            document.getElementById('time').innerHTML = time + " on " + date;
+            document.getElementById('time').innerHTML = time + "<br>" + date;
+            document.getElementById('time').style.color = "red";
+            document.getElementById('time').style.fontWeight = 600;
+            document.getElementById('curent').style.color = "green";
+            document.getElementById('curent').style.fontWeight = 600;
         }, 1000);
+
     </script>
 
 </head>
@@ -71,8 +77,7 @@
 
     <div class="container my-4">
         <div class="jumbotron">
-            <h1 class="display-4">Current time Is : <span id="time"></span></h1>
-            <p class="lead">We have got uou covered.</p>
+            <h1 class="display-4"><span id="curent">Current time is : </span><span id="time"></span></h1>
             <hr class="my-4">
             <p>We are here to show you the time for fifferent countries.</p>
             <p class="lead">
